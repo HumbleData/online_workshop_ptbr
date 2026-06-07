@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # Sync the workshop content from PyLadiesSalvador/humbledata-iniciantes-ptbr main
-# into conteudo/. Run from the root of this repo.
+# into conteudo/. Always operates relative to this script's own directory.
 set -euo pipefail
+
+cd "$(dirname "$0")"
 
 UPSTREAM="https://github.com/PyLadiesSalvador/humbledata-iniciantes-ptbr.git"
 UPSTREAM_BRANCH="main"
